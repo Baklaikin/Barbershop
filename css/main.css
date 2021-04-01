@@ -1,13 +1,18 @@
-*,
-*::before,
-*::after {
+html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-body {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+}
+
+body {
+  font-family: 'Open-sans', sans-serif;
+  margin: 0;
 }
 
 h1,
@@ -42,22 +47,18 @@ img {
 }
 
 .container__hero {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 480px;
-  height: 580px;
+  position: relative;
+  max-width: 480px;
+  height: auto;
+  margin: 0 auto;
+  padding: 40px 31px 183px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-image: url("../img/slider.jpg");
-  z-index: -1;
 }
 
 .menu__button {
-  position: absolute;
-  top: 48px;
-  right: 31px;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -81,14 +82,26 @@ img {
 
 .about__first-text {
   margin-bottom: 20px;
+  color: var(--sub-color);
 }
 
 .about__title {
   margin-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 48px;
   line-height: 1.1666;
   letter-spacing: 0.05em;
   color: #fff;
+}
+
+:root {
+  --sub-color: rgba(157, 164, 189, 0.6);
+  --main-color: #555555;
+  --accent: #ff6c00;
+  --background: #e5e5e5;
+  --black: #303030;
+  --white: #ffffff;
+  --form: rgba(157, 164, 189, 0.4);
 }
 /*# sourceMappingURL=main.css.map */
